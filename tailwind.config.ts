@@ -16,6 +16,9 @@ const config: Config = {
       colors: {
         'jeopardy-blue': '#060CE9',
       },
+      fontFamily: {
+        OPTIKorinnaAgency: ['OPTIKorinna-Agency', 'serif'],
+      },
     },
   },
   plugins: [],

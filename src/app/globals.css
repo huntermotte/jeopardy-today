@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'OPTIKorinna-Agency';
+  src: url('/fonts/OPTIKorinna-Agency.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
