@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ClueCard from "@/app/components/clue-card";
+import ClueCard from "@/app/clue-card";
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full ml-auto mr-auto lg:max-w-5xl">
+      <div className="relative flex place-items-center ml-auto mr-auto lg:max-w-5xl">
         {/*<Image*/}
         {/*  className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"*/}
         {/*  src="/next.svg"*/}
