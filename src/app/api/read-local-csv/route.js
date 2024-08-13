@@ -14,7 +14,7 @@ export async function GET() {
                 const data = result.data;
                 const randomIndex = Math.floor(Math.random() * data.length);
                 const randomRow = data[randomIndex];
-                resolve(NextResponse.json({ randomRow }));
+                resolve(NextResponse.json({ randomRow: JSON.parse(JSON.stringify(randomRow).replace(/\s(?=\w+":)/g, "")) }));
             },
             error: (error) => {
                 reject(NextResponse.json({ error: error.message }));
