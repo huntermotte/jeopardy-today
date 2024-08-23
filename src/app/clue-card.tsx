@@ -26,6 +26,7 @@ export default function ClueCard() {
 
             const result = await response.json();
             if (result.randomRow) {
+                console.log(result.randomRow);
                 setJeopardyQuestion(result.randomRow);
             }
         } catch (err) {
@@ -44,7 +45,10 @@ export default function ClueCard() {
         lg:p-10 lg:min-h-80 lg:flex lg:justify-center lg:items-center lg:text-4xl lg:w-screen"
             onClick={revealAnswer}>
             {jeopardyQuestion ? (
-                <h1 className="text-white lg:w-3/4">{!showAnswer ? jeopardyQuestion.Question : jeopardyQuestion.Answer}</h1>
+                <div className="lg:w-3/4">
+                    {!showAnswer && <h3 className="mb-8 lg:text-2xl">{jeopardyQuestion.Category}</h3>}
+                    <h1 className="text-white">{!showAnswer ? jeopardyQuestion.Question : jeopardyQuestion.Answer}</h1>
+                </div>
             ) : (
                 <h1 className="text-white lg:w-3/4">Loading a good question...</h1>
             )}
